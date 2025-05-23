@@ -19,15 +19,15 @@ const About = () => {
               </h1>
               
               <p className="text-lg text-foreground/80 mb-6">
-                Hello! I'm <span className="text-primary font-medium">Prajith</span>, a passionate web developer and designer with a keen eye for creating beautiful, functional, and user-centered digital experiences.
+                Hello! I'm <span className="text-primary font-medium">Prajith</span>,  a dedicated full stack developer with a strong foundation in Computer Science and a passion for building responsive, efficient, and user-friendly web applications.
               </p>
               
               <p className="text-lg text-foreground/80 mb-6">
-                With 5+ years of experience in the field, I've worked on a variety of projects ranging from small business websites to complex web applications. My approach combines technical expertise with creative problem-solving to deliver solutions that not only look great but also perform exceptionally well.
+                Currently in my final year of a Bachelor's degree in Computer Science and Engineering, I’ve gained hands-on experience through academic projects and personal initiatives. My work blends front-end creativity with back-end logic, using modern technologies to craft seamless digital experiences.
               </p>
               
               <p className="text-lg text-foreground/80">
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying outdoor activities to maintain a healthy work-life balance.
+                Beyond coding, I enjoy exploring emerging tools in web development, collaborating on innovative ideas, and staying active to maintain a balanced and inspired lifestyle.
               </p>
             </motion.div>
             
@@ -45,7 +45,7 @@ const About = () => {
                 {/* Profile image with border */}
                 <div className="relative z-10 w-full h-full rounded-2xl overflow-hidden border-4 border-card shadow-2xl">
                   <img 
-                    src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg" 
+                    src="./src/images/itsme.jpg" 
                     alt="Profile" 
                     className="w-full h-full object-cover"
                   />
@@ -82,53 +82,6 @@ const About = () => {
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h3 className="text-xl font-bold mb-6 flex items-center">
-                <span className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center mr-2">
-                  W
-                </span>
-                Work Experience
-              </h3>
-              
-              <div className="space-y-6 relative before:absolute before:inset-0 before:w-[2px] before:bg-border before:ml-4 before:-translate-x-1/2">
-                {[
-                  {
-                    title: "Senior Frontend Developer",
-                    company: "Tech Solutions Inc.",
-                    period: "2021 - Present",
-                    description: "Leading frontend development for enterprise applications, mentoring junior developers, and implementing modern web technologies."
-                  },
-                  {
-                    title: "Web Developer",
-                    company: "Digital Agency",
-                    period: "2018 - 2021",
-                    description: "Developed responsive websites and applications for clients across various industries, focusing on performance and user experience."
-                  },
-                  {
-                    title: "Junior Developer",
-                    company: "StartUp Hub",
-                    period: "2016 - 2018",
-                    description: "Collaborated with a team to build and maintain web applications, gained expertise in front-end frameworks and responsive design."
-                  }
-                ].map((job, index) => (
-                  <div 
-                    key={index} 
-                    className="pl-10 relative"
-                  >
-                    <div className="absolute left-0 top-1 w-8 h-8 bg-card border-4 border-primary rounded-full z-10"></div>
-                    <h4 className="text-lg font-medium">{job.title}</h4>
-                    <p className="text-primary font-medium">{job.company}</p>
-                    <p className="text-sm text-foreground/70 mb-2">{job.period}</p>
-                    <p className="text-foreground/80">{job.description}</p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
             
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -146,22 +99,22 @@ const About = () => {
               <div className="space-y-6 relative before:absolute before:inset-0 before:w-[2px] before:bg-border before:ml-4 before:-translate-x-1/2">
                 {[
                   {
-                    degree: "Master's in Computer Science",
-                    institution: "Tech University",
-                    period: "2014 - 2016",
-                    description: "Specialized in Web Technologies and Human-Computer Interaction, with a focus on modern web application architecture."
+                    degree: "Bachelors in Computer Science and Engineering",
+                    institution: "Dr. Mahalingam College of Engineering and Technology, Pollachi",
+                    period: "2022 - 2026",
+                    description: "Currently pursuing the final year of a Bachelor's degree in Computer Science and Engineering. Passionate about Full Stack Development, with hands-on experience in building dynamic web applications."
                   },
                   {
-                    degree: "Bachelor's in Information Technology",
-                    institution: "State University",
-                    period: "2010 - 2014",
-                    description: "Fundamental education in programming, database systems, and software development, with honors in web development."
+                    degree: "Higher Secondary School (HSC)",
+                    institution: "Bethlahem Matric Higher Secondary School, KanyaKumari",
+                    period: "2022",
+                    description: "Completed higher education with a strong academic record, securing 83% overall."
                   },
                   {
-                    degree: "Web Development Bootcamp",
-                    institution: "Code Academy",
-                    period: "2013",
-                    description: "Intensive training in modern web development technologies and practices, including React, Node.js, and responsive design."
+                    degree: "Secondary School (SSLC)",
+                    institution: "Bethlahem Matric Higher Secondary School, KanyaKumari",
+                    period: "2020",
+                    description: "Completed secondary education with a strong academic record, securing 89% overall."
                   }
                 ].map((edu, index) => (
                   <div 

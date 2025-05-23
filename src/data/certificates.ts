@@ -3,50 +3,43 @@ import { Certificate } from '../types';
 export const certificates: Certificate[] = [
   {
     id: 1,
-    title: "Full Stack Web Development",
-    issuer: "Udemy",
+    title: "C Programming and C++",
+    issuer: "ITDesk",
     date: "June 2023",
-    image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    image: './src/images/ITDesk.png',
     link: "https://udemy-certificate.com/12345"
   },
   {
     id: 2,
-    title: "React - The Complete Guide",
-    issuer: "Coursera",
-    date: "March 2023",
-    image: "https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "JavaScript - Complete Course",
+    issuer: "Udemy",
+    date: "March 2025",
+    image: "./src/images/UdemyJS.jpg",
     link: "https://coursera.org/certificates/react-guide"
   },
   {
     id: 3,
-    title: "Advanced JavaScript Concepts",
-    issuer: "freeCodeCamp",
-    date: "December 2022",
-    image: "https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "Node.js, Express, MongoDB - The Complete Bootcamp 2024",
+    issuer: "Udemy",
+    date: "May 2024",
+    image: "./src/images/UdemyMern.jpg",
     link: "https://freecodecamp.org/certification/javascript"
   },
   {
     id: 4,
-    title: "UI/UX Design Fundamentals",
-    issuer: "Udacity",
-    date: "September 2022",
-    image: "https://images.pexels.com/photos/196646/pexels-photo-196646.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "Executive Member of Students Research Council 2023",
+    issuer: "Dr.MCET",
+    date: "May 2024",
+    image: "./src/images/src2023.jpg",
     link: "https://udacity.com/certificates/uiux"
   },
   {
     id: 5,
-    title: "Node.js Master Class",
-    issuer: "Pluralsight",
-    date: "May 2022",
-    image: "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    title: "Joint Seceratary of Students Research Council 2024",
+    issuer: "Dr.MCET",
+    date: "May 2025",
+    image: "./src/images/src2024g.jpg",
     link: "https://pluralsight.com/certificates/nodejs"
   },
-  {
-    id: 6,
-    title: "Data Structures & Algorithms",
-    issuer: "edX",
-    date: "February 2022",
-    image: "https://images.pexels.com/photos/7111579/pexels-photo-7111579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    link: "https://edx.org/certificates/dsa"
-  }
+  
 ];

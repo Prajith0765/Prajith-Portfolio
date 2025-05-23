@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import SectionHeading from '../components/SectionHeading';
 import ContactLink from '../components/ContactLink';
 import { Github, Linkedin, Mail, Instagram, Send } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +13,7 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,12 +23,30 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
 
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-      setFormData({ name: '', email: '', message: '' });
-    }, 1500);
+    // EmailJS send email
+    emailjs.send(
+      'service_8u19rlj', // Replace with your EmailJS Service ID
+      'template_ybp6rtf', // Replace with your EmailJS Template ID
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      },
+      'j1XrlZ-Cbue5cA6on' // Replace with your EmailJS User ID
+    )
+      .then((response) => {
+        console.log('Email sent successfully!', response.status, response.text);
+        setIsSubmitting(false);
+        setSubmitted(true);
+        setFormData({ name: '', email: '', message: '' });
+      })
+      .catch((err) => {
+        console.error('Failed to send email:', err);
+        setIsSubmitting(false);
+        setError('Failed to send message. Please try again later.');
+      });
   };
 
   return (
@@ -41,26 +61,26 @@ const Contact = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <ContactLink 
               platform="GitHub" 
-              username="yourusername" 
-              link="https://github.com/yourusername" 
+              username="Prajith0765" 
+              link="https://github.com/Prajith0765" 
               icon={Github} 
             />
             <ContactLink 
               platform="LinkedIn" 
-              username="yourname" 
-              link="https://linkedin.com/in/yourname" 
+              username="prajith0765" 
+              link="https://www.linkedin.com/in/prajith0765/" 
               icon={Linkedin} 
             />
             <ContactLink 
               platform="Email" 
-              username="your.email@example.com" 
-              link="mailto:your.email@example.com" 
+              username="prajith2873@outlook.com" 
+              link="mailto:prajith2873@outlook.com" 
               icon={Mail} 
             />
             <ContactLink 
               platform="Instagram" 
-              username="@yourhandle" 
-              link="https://instagram.com/yourhandle" 
+              username="prajith9344" 
+              link="https://www.instagram.com/prajith9344/" 
               icon={Instagram} 
             />
           </div>
@@ -141,6 +161,10 @@ const Contact = () => {
                       className="w-full px-3 py-2 bg-background border border-border rounded-md focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
                     />
                   </div>
+                  
+                  {error && (
+                    <p className="text-red-500 text-sm mb-4">{error}</p>
+                  )}
                   
                   <button
                     type="submit"

@@ -14,7 +14,7 @@ const Footer = () => {
           
           <div className="flex space-x-4">
             <a 
-              href="https://github.com/" 
+              href="https://github.com/Prajith0765" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-foreground/70 hover:text-primary transition-colors"
@@ -23,7 +23,7 @@ const Footer = () => {
               <Github size={20} />
             </a>
             <a 
-              href="https://linkedin.com/" 
+              href="https://linkedin.com/prajith0765/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-foreground/70 hover:text-primary transition-colors"
@@ -32,14 +32,14 @@ const Footer = () => {
               <Linkedin size={20} />
             </a>
             <a 
-              href="mailto:your.email@example.com" 
+              href="mailto:prajith2873@outlook.com" 
               className="text-foreground/70 hover:text-primary transition-colors"
               aria-label="Email"
             >
               <Mail size={20} />
             </a>
             <a 
-              href="https://instagram.com/" 
+              href="https://instagram.com/prajith9344/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-foreground/70 hover:text-primary transition-colors"

@@ -37,7 +37,7 @@ const HeroSection = () => {
           className="text-2xl md:text-3xl font-light mb-6 text-foreground/80"
           variants={item}
         >
-          Web Developer | UI/UX Designer | Problem Solver
+          Web Developer | UI/UX Designer | Programmer
         </motion.h2>
         
         <motion.p 
