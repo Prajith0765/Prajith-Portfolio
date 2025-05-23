@@ -77,8 +77,8 @@ const About = () => {
       <section className="section-padding">
         <div className="container">
           <SectionHeading 
-            title="Experience & Education" 
-            subtitle="My professional journey and academic background."
+            title="Education" 
+            subtitle="My academic background."
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">

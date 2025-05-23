@@ -198,7 +198,7 @@ const Contact = () => {
       <section className="py-12 bg-card/30">
         <div className="container">
           <div className="text-center">
-            <h3 className="text-xl font-medium mb-3">Looking for freelance opportunities</h3>
+            <h3 className="text-xl font-medium mb-3">Looking for Job oppurtunities and freelancing</h3>
             <p className="text-foreground/70 max-w-xl mx-auto">
               I'm currently available for freelance work. If you have a project that needs my expertise, let's discuss how we can work together.
             </p>

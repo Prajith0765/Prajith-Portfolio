@@ -7,7 +7,7 @@ export const certificates: Certificate[] = [
     issuer: "ITDesk",
     date: "June 2023",
     image: './src/images/ITDesk.png',
-    link: "https://udemy-certificate.com/12345"
+    link: "https://www.linkedin.com/posts/prajith0765_c-c-programming-completion-certificate-activity-7114985732699557888-YNVg?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAERw9dIBe7KngM_jG9TcSjDWzqLwSyUZvHw"
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const certificates: Certificate[] = [
     issuer: "Udemy",
     date: "March 2025",
     image: "./src/images/UdemyJS.jpg",
-    link: "https://coursera.org/certificates/react-guide"
+    link: ""
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ export const certificates: Certificate[] = [
     issuer: "Udemy",
     date: "May 2024",
     image: "./src/images/UdemyMern.jpg",
-    link: "https://freecodecamp.org/certification/javascript"
+    link: "https://www.linkedin.com/posts/prajith0765_successfully-completed-a-course-on-nodejs-activity-7229712169649512448-ayf2?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAERw9dIBe7KngM_jG9TcSjDWzqLwSyUZvHw"
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ export const certificates: Certificate[] = [
     issuer: "Dr.MCET",
     date: "May 2024",
     image: "./src/images/src2023.jpg",
-    link: "https://udacity.com/certificates/uiux"
+    link: ""
   },
   {
     id: 5,
@@ -39,7 +39,7 @@ export const certificates: Certificate[] = [
     issuer: "Dr.MCET",
     date: "May 2025",
     image: "./src/images/src2024g.jpg",
-    link: "https://pluralsight.com/certificates/nodejs"
+    link: ""
   },
   
 ];

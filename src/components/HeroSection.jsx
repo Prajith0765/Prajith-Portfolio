@@ -44,8 +44,10 @@ const HeroSection = () => {
           className="max-w-2xl mx-auto text-lg text-foreground/70 mb-8"
           variants={item}
         >
-          I create beautiful, functional, and responsive web applications 
-          with modern technologies and a focus on user experience.
+          Passionate about building seamless digital experiences, 
+          I craft responsive and efficient web applications that balance functionality with design. 
+          With a love for full stack development, 
+          I turn ideas into interactive, user-focused solutions using modern technologies.
         </motion.p>
         
         <motion.div className="flex flex-wrap justify-center gap-4" variants={item}>
