@@ -36,6 +36,5 @@ export const projects: Project[] = [
     githubLink: "https://github.com/Prajith0765/Lighting-Lamp-using-HTML-CSS",
     demoLink: "https://prajith0765.github.io/Lighting-Lamp-using-HTML-CSS/",
     technologies: ["HTML", "CSS", "JavaScript"]
-  },
-  
+  }, 
 ];
