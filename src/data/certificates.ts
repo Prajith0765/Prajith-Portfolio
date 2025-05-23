@@ -6,7 +6,7 @@ export const certificates: Certificate[] = [
     title: "C Programming and C++",
     issuer: "ITDesk",
     date: "June 2023",
-    image: './src/images/ITDesk.png',
+    image: '/images/ITDesk.png',
     link: "https://www.linkedin.com/posts/prajith0765_c-c-programming-completion-certificate-activity-7114985732699557888-YNVg?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAERw9dIBe7KngM_jG9TcSjDWzqLwSyUZvHw"
   },
   {
@@ -14,7 +14,7 @@ export const certificates: Certificate[] = [
     title: "JavaScript - Complete Course",
     issuer: "Udemy",
     date: "March 2025",
-    image: "./src/images/UdemyJS.jpg",
+    image: "/images/UdemyJS.jpg",
     link: ""
   },
   {
@@ -22,7 +22,7 @@ export const certificates: Certificate[] = [
     title: "Node.js, Express, MongoDB - The Complete Bootcamp 2024",
     issuer: "Udemy",
     date: "May 2024",
-    image: "./src/images/UdemyMern.jpg",
+    image: "/images/UdemyMern.jpg",
     link: "https://www.linkedin.com/posts/prajith0765_successfully-completed-a-course-on-nodejs-activity-7229712169649512448-ayf2?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAERw9dIBe7KngM_jG9TcSjDWzqLwSyUZvHw"
   },
   {
@@ -30,7 +30,7 @@ export const certificates: Certificate[] = [
     title: "Executive Member of Students Research Council 2023",
     issuer: "Dr.MCET",
     date: "May 2024",
-    image: "./src/images/src2023.jpg",
+    image: "/images/src2023.jpg",
     link: ""
   },
   {
@@ -38,7 +38,7 @@ export const certificates: Certificate[] = [
     title: "Joint Seceratary of Students Research Council 2024",
     issuer: "Dr.MCET",
     date: "May 2025",
-    image: "./src/images/src2024g.jpg",
+    image: "/images/src2024g.jpg",
     link: ""
   },
   
