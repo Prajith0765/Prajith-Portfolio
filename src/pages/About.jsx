@@ -45,7 +45,7 @@ const About = () => {
                 {/* Profile image with border */}
                 <div className="relative z-10 w-full h-full rounded-2xl overflow-hidden border-4 border-card shadow-2xl">
                   <img 
-                    src="public/itsme.jpg" 
+                    src="/images/itsme.jpg" 
                     alt="Profile" 
                     className="w-full h-full object-cover"
                   />
