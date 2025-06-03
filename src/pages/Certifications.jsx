@@ -48,7 +48,7 @@ const Certifications = () => {
                 I believe in the power of continuous learning and staying updated with the latest technologies and best practices in the industry. These certifications represent my commitment to growth and excellence in my field.
               </p>
               <p className="text-foreground/80">
-                Currently, I'm working on advanced courses in cloud architecture and machine learning to further expand my skill set and take on more challenging projects.
+                Currently, I'm working on gaining expertise in full stack development as well as learning how to implement cloud technologies and machine learning models within full stack applications.
               </p>
             </div>
           </motion.div>
