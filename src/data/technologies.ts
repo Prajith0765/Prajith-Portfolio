@@ -71,5 +71,13 @@ export const technologies: Technology[] = [
   {
     name: "Visual Studio Code",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+  },
+  {
+    name: "Salesforce",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/salesforce/salesforce-original.svg"
+  },
+  {
+    name: "Apex",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apex/apex-original.svg"
   }
 ];
