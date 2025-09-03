@@ -19,12 +19,20 @@ export const technologies: Technology[] = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
   },
   {
+    name: "Apex",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apex/apex-original.svg"
+  },
+  {
     name: "React",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
   },
   {
     name: "Node.js",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+  },
+  {
+    name: "Express.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
   },
   {
     name: "HTML5",
@@ -75,9 +83,6 @@ export const technologies: Technology[] = [
   {
     name: "Salesforce",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/salesforce/salesforce-original.svg"
-  },
-  {
-    name: "Apex",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apex/apex-original.svg"
   }
+  
 ];

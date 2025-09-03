@@ -37,7 +37,7 @@ const HeroSection = () => {
           className="text-2xl md:text-3xl font-light mb-6 text-foreground/80"
           variants={item}
         >
-          Web Developer | UI/UX Designer | Programmer
+          Full-stack Developer | Salesforce Developer | Programmer
         </motion.h2>
         
         <motion.p 
@@ -45,8 +45,8 @@ const HeroSection = () => {
           variants={item}
         >
           Passionate about building seamless digital experiences, 
-          I craft responsive and efficient web applications that balance functionality with design. 
-          With a love for full stack development, 
+          I develop responsive and efficient web applications that balance functionality with design. 
+          With a strong love on Full stack Development and Salesforce Development, 
           I turn ideas into interactive, user-focused solutions using modern technologies.
         </motion.p>
         

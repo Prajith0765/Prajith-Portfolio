@@ -102,7 +102,7 @@ const About = () => {
                     degree: "Bachelors in Computer Science and Engineering",
                     institution: "Dr. Mahalingam College of Engineering and Technology, Pollachi",
                     period: "2022 - 2026",
-                    description: "Currently pursuing the final year of a Bachelor's degree in Computer Science and Engineering. Passionate about Full Stack Development, with hands-on experience in building dynamic web applications."
+                    description: "Currently pursuing the final year of a Bachelor's degree in Computer Science and Engineering with currently 8.5 CGPA."
                   },
                   {
                     degree: "Higher Secondary School (HSC)",
