@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import { Link } from 'react-scroll';
+import { NavLink } from "react-router-dom";
 
 const HeroSection = () => {
   const container = {
@@ -51,18 +52,18 @@ const HeroSection = () => {
         </motion.p>
         
         <motion.div className="flex flex-wrap justify-center gap-4" variants={item}>
-          <a 
-            href="/contact" 
+          <NavLink 
+            to="/contact" 
             className="btn btn-primary"
           >
             Get in Touch
-          </a>
-          <a 
-            href="/works" 
+          </NavLink>
+          <NavLink 
+            to="/works" 
             className="btn btn-outline"
           >
             View My Work
-          </a>
+          </NavLink>
         </motion.div>
       </motion.div>
 
