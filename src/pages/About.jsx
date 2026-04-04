@@ -23,7 +23,7 @@ const About = () => {
               </p>
               
               <p className="text-lg text-foreground/80 mb-6">
-                Currently in my final year of a Bachelor's degree in Computer Science and Engineering, I’ve gained hands-on experience through academic projects and personal initiatives. My work blends front-end creativity with back-end logic, using modern technologies to craft seamless digital experiences.
+                Currently in my final year of a Bachelor's degree in Computer Science and Engineering, I am also working as a Software Development Intern at UniteCare Software Solutions. I have gained hands-on experience through real-world product development and bug fixing, academic projects and personal initiatives. My work blends front-end creativity with back-end logic, using modern technologies to craft seamless digital experiences.
               </p>
               
               <p className="text-lg text-foreground/80">
@@ -45,9 +45,9 @@ const About = () => {
                 {/* Profile image with border */}
                 <div className="relative z-10 w-full h-full rounded-2xl overflow-hidden border-4 border-card shadow-2xl">
                   <img 
-                    src="/images/itsme.jpg" 
+                    src="/images/prajith-photo.jpg" 
                     alt="Profile" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-[50%_20%]"
                   />
                   
                   {/* Gradient overlay for integration with background */}
