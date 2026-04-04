@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const Certifications = () => {
   return (
-    <div className="pt-20">
+    <div className="pt-16">
       <section className="section-padding">
         <div className="container">
           <motion.div

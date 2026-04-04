@@ -5,7 +5,7 @@ import { technologies } from '../data/technologies';
 
 const About = () => {
   return (
-    <div className="pt-20">
+    <div className="pt-16">
       <section className="section-padding min-h-[70vh] flex items-center">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

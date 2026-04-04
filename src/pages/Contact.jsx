@@ -50,7 +50,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="pt-20">
+    <div className="pt-16">
       <section className="section-padding">
         <div className="container">
           <SectionHeading 
