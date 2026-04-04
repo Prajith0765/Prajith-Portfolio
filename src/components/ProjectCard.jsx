@@ -66,15 +66,47 @@ const ProjectCard = ({
             </div>
             
             <div className="flex space-x-3">
-              <a 
-                href={githubLink} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="btn btn-outline flex items-center gap-2"
-              >
-                <Github size={16} />
-                <span>Code</span>
-              </a>
+              {/* OLD PROJECT (string link) */}
+              {typeof githubLink === "string" && (
+                <a 
+                  href={githubLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="btn btn-outline flex items-center gap-2"
+                >
+                  <Github size={16} />
+                  <span>Code</span>
+                </a>
+              )}
+
+              {/* NEW PROJECT (frontend + backend) */}
+              {typeof githubLink === "object" && (
+                <>
+                  {githubLink.frontend && (
+                    <a 
+                      href={githubLink.frontend} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="btn btn-outline flex items-center gap-2"
+                    >
+                      <Github size={16} />
+                      <span>Frontend</span>
+                    </a>
+                  )}
+
+                  {githubLink.backend && (
+                    <a 
+                      href={githubLink.backend} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="btn btn-outline flex items-center gap-2"
+                    >
+                      <Github size={16} />
+                      <span>Backend</span>
+                    </a>
+                  )}
+                </>
+              )}
               {demoLink && (
                 <a 
                   href={demoLink} 

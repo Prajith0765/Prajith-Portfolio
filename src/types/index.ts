@@ -3,7 +3,12 @@ export interface Project {
   title: string;
   description: string;
   image: string;
-  githubLink: string;
+  githubLink: 
+  | string 
+  | {
+      frontend?: string;
+      backend?: string;
+    };
   demoLink?: string;
   technologies: string[];
 }

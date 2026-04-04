@@ -77,11 +77,53 @@ const About = () => {
       <section className="section-padding">
         <div className="container">
           <SectionHeading 
-            title="Education" 
-            subtitle="My academic background."
+            title="Experience & Education" 
+            subtitle="My professional journey and academic background."
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h3 className="text-xl font-bold mb-6 flex items-center">
+                <span className="w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center mr-2">
+                  W
+                </span>
+                Work Experience
+              </h3>
+              
+              <div className="space-y-6 relative before:absolute before:inset-0 before:w-[2px] before:bg-border before:ml-4 before:-translate-x-1/2">
+                {[
+                  
+                  {
+                    title: "Intern (Full-stack Software Developer)",
+                    company: "UniteCare Software Solutions",
+                    period: "Jan 2026 - Present",
+                    location: "Coimbatore, Tamil Nadu",
+                    techstack: "Angular, .NET Framework, C#, MSSQL" , 
+                    description: "Collaborated with a team to build and maintain real-world Product and Live Bug Fixing."
+                  }
+                ].map((job, index) => (
+                  <div 
+                    key={index} 
+                    className="pl-10 relative"
+                  >
+                    <div className="absolute left-0 top-1 w-8 h-8 bg-card border-4 border-primary rounded-full z-10"></div>
+                    <h4 className="text-lg font-medium">{job.title}</h4>
+                    <p className="text-primary font-medium">{job.company}</p>
+                    <p className="text-sm text-foreground/70 mb-2">{job.period}</p>
+                    <p className="text-m/70 mb-2">{job.location}</p>
+                    <p className="text-secondary/80 mb-3">{job.techstack}</p>
+                    <p className="text-foreground/80">{job.description}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+            
             
             <motion.div
               initial={{ opacity: 0, y: 20 }}

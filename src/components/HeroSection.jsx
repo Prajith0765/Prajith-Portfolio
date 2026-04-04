@@ -37,7 +37,7 @@ const HeroSection = () => {
           className="text-2xl md:text-3xl font-light mb-6 text-foreground/80"
           variants={item}
         >
-          Full-stack Developer | Salesforce Developer | Programmer
+          Full-stack Developer | Programmer
         </motion.h2>
         
         <motion.p 
