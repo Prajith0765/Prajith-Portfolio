@@ -29,37 +29,27 @@ export const projects: Project[] = [
     technologies: ["React", "Tailwind CSS", "Animation"]
   },
   {
-    id: 4,
-    title: "Lighting Lamp",
-    description: "This project demonstrates a simple lamp lighting effect using HTML and CSS. It visually represents a lamp that can switch between 'on' and 'off' states using styled elements and animations. The project showcases fundamental front-end skills, focusing on layout, styling, and basic interactivity.",
-    image: "https://cdn.dribbble.com/users/2064121/screenshots/5870025/pendant_lamp_thumb_2x_4x.jpg?resize=1000x750&vertical=center",
-    githubLink: "https://github.com/Prajith0765/Lighting-Lamp-using-HTML-CSS",
-    demoLink: "https://prajith0765.github.io/Lighting-Lamp-using-HTML-CSS/",
-    technologies: ["HTML", "CSS", "JavaScript"]
-  }, 
-
-  {
     id: 5,
     title: "Inventory Management System",
-    description: "This Inventory Management System using Angular, .NET Framework, MSSQL. It performs the CRED operations of handling Product Data in a Inventory with the functionality of import and export product data in a excel sheet. The project showcases fundamental front-end skills, focusing on functionality, layout, and basic interactivity.",
+    description: "This Inventory Management System using Angular, .NET Framework, SQL Server. It performs the CRED operations of handling Product Data in a Inventory with the functionality of import and export product data in a excel sheet. The project showcases fundamental front-end skills, focusing on functionality, layout, and basic interactivity.",
     image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1000&q=80",
     githubLink: {
     frontend: "https://github.com/Prajith0765/Inventory_Management_Frontend",
     backend: "https://github.com/Prajith0765/Product_Inventory_Management_Backend"
   },
-    technologies: ["Angular", ".NET Framework", "MSSQL", "Onion Architecture"]
+    technologies: ["Angular", ".NET Framework", "SQL Server", "Onion Architecture"]
   },
   
   {
-    id: 5,
+    id: 6,
     title: "Hospital Management System",
-    description: "This Hospital Management System using Angular, .NET Framework, MSSQL. It performs the CRED operations of handling Patient Details in a Hospital. The project showcases fundamental front-end skills, focusing on functionality, layout, and basic interactivity.",
+    description: "This Hospital Management System using Angular, .NET Framework, SQL Server. It performs the CRED operations of handling Patient Details in a Hospital. The project showcases fundamental front-end skills, focusing on functionality, layout, and basic interactivity.",
     image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1000&q=80",
     githubLink: {
     frontend: "https://github.com/Prajith0765/Hospital_Management_Frontend",
     backend: "https://github.com/Prajith0765/Hospital_Management_Backend"
   },
-    technologies: ["Angular", ".NET Framework", "MSSQL"]
+    technologies: ["Angular", ".NET Framework", "SQL Server"]
   },
 
 ];

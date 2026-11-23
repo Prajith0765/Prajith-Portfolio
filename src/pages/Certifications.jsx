@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const Certifications = () => {
   return (
-    <div className="pt-16">
+    <div className="pt-20">
       <section className="section-padding">
         <div className="container">
           <motion.div
@@ -13,8 +13,9 @@ const Certifications = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <SectionHeading 
-              title="My Certifications" 
+            <SectionHeading
+              eyebrow="Learning"
+              title="My Certifications"
               subtitle="A collection of courses and certifications I've completed to expand my knowledge and skills."
             />
           </motion.div>
@@ -34,7 +35,7 @@ const Certifications = () => {
         </div>
       </section>
       
-      <section className="section-padding bg-card/30">
+      <section className="section-padding bg-card/30 border-y border-border/50">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

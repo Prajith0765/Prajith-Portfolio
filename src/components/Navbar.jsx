@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -24,6 +24,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const { scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 28 });
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -63,7 +65,7 @@ const Navbar = () => {
       <motion.header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-background/90 backdrop-blur-md py-2 shadow-md'
+            ? 'bg-background/70 backdrop-blur-xl py-2 border-b border-border/60'
             : 'bg-transparent py-4'
         }`}
         initial={{ y: -100 }}
@@ -71,37 +73,59 @@ const Navbar = () => {
         transition={{ duration: 0.3, ease: 'easeOut' }}
       >
         <div className="container mx-auto px-4 flex justify-between items-center">
-          <NavLink
-            to="/"
-            className="text-2xl font-bold text-foreground flex items-center gap-2"
-          >
-            <span className="text-primary">Portfolio</span>
+          <NavLink to="/" className="flex items-center gap-2.5 group">
+            <span className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center font-display font-bold text-white group-hover:scale-105 transition-transform">
+              P
+            </span>
+            <span className="font-display text-lg font-semibold text-foreground">
+              Prajith
+            </span>
           </NavLink>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex space-x-4">
+          <nav className="hidden md:flex items-center gap-1 p-1 rounded-full border border-border bg-card/50 backdrop-blur-md">
             {navLinks.map((link) => (
               <NavLink
                 key={link.path}
                 to={link.path}
+                end={link.path === '/'}
                 className={({ isActive }) =>
-                  `nav-link ${isActive ? 'nav-link-active' : ''}`
+                  `relative px-4 py-1.5 rounded-full text-sm transition-colors ${
+                    isActive
+                      ? 'text-white'
+                      : 'text-foreground/70 hover:text-foreground'
+                  }`
                 }
               >
-                {link.name}
+                {({ isActive }) => (
+                  <>
+                    {isActive && (
+                      <motion.span
+                        layoutId="nav-pill"
+                        className="absolute inset-0 rounded-full bg-primary"
+                        transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                      />
+                    )}
+                    <span className="relative z-10">{link.name}</span>
+                  </>
+                )}
               </NavLink>
             ))}
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground z-50"
+            className="md:hidden text-foreground z-[1000] p-2 rounded-lg border border-border bg-card/50"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-[3px] z-[60] origin-left bg-gradient-to-r from-primary via-accent to-secondary"
+        style={{ scaleX: progress }}
+      />
       </motion.header>
 
       {/* Fullscreen Mobile Nav */}
@@ -112,22 +136,29 @@ const Navbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[999] bg-background flex flex-col items-center justify-center"
+            className="fixed inset-0 z-[999] bg-background/95 backdrop-blur-xl flex flex-col items-center justify-center"
           >
-            <nav className="flex flex-col items-center space-y-6 text-xl">
-              {navLinks.map((link) => (
-                <NavLink
+            <nav className="flex flex-col items-center space-y-6">
+              {navLinks.map((link, i) => (
+                <motion.div
                   key={link.path}
-                  to={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className={({ isActive }) =>
-                    `text-2xl ${
-                      isActive ? 'text-primary font-bold' : 'text-foreground'
-                    }`
-                  }
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.05 * i }}
                 >
-                  {link.name}
-                </NavLink>
+                  <NavLink
+                    to={link.path}
+                    end={link.path === '/'}
+                    onClick={() => setIsOpen(false)}
+                    className={({ isActive }) =>
+                      `font-display text-3xl ${
+                        isActive ? 'gradient-text font-bold' : 'text-foreground/80'
+                      }`
+                    }
+                  >
+                    {link.name}
+                  </NavLink>
+                </motion.div>
               ))}
             </nav>
           </motion.div>

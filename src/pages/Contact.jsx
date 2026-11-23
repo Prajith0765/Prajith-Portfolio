@@ -50,15 +50,16 @@ const Contact = () => {
   };
 
   return (
-    <div className="pt-16">
+    <div className="pt-20">
       <section className="section-padding">
         <div className="container">
-          <SectionHeading 
-            title="Get In Touch" 
+          <SectionHeading
+            eyebrow="Contact"
+            title="Get In Touch"
             subtitle="Have a question or want to work together? Reach out through any of these platforms or fill out the contact form below."
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
             <ContactLink 
               platform="GitHub" 
               username="Prajith0765" 
@@ -91,8 +92,8 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="card p-6">
-              <h3 className="text-xl font-bold mb-4">Send me a message</h3>
+            <div className="card p-6 md:p-8">
+              <h3 className="text-2xl font-bold mb-6">Send me a message</h3>
               
               {submitted ? (
                 <motion.div 
@@ -195,11 +196,11 @@ const Contact = () => {
         </div>
       </section>
       
-      <section className="py-12 bg-card/30">
+      <section className="py-14 bg-card/30 border-y border-border/50">
         <div className="container">
           <div className="text-center">
-            <h3 className="text-xl font-medium mb-3">Looking for Job oppurtunities and freelancing</h3>
-            <p className="text-foreground/70 max-w-xl mx-auto">
+            <h3 className="text-xl font-medium mb-3">Looking for job opportunities and freelancing</h3>
+            <p className="text-muted-foreground max-w-xl mx-auto">
               I'm currently available for freelance work. If you have a project that needs my expertise, let's discuss how we can work together.
             </p>
           </div>

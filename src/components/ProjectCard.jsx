@@ -17,62 +17,80 @@ const ProjectCard = ({
   };
 
   return (
-    <motion.div 
-      className="card overflow-hidden"
+    <motion.div
+      className="card group flex flex-col"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.6 }}
+      whileHover={{ y: -3 }}
     >
-      <div 
-        className="h-48 overflow-hidden relative"
+      <div
+        className="h-52 overflow-hidden relative cursor-pointer"
         onClick={toggleExpand}
       >
-        <img 
-          src={image} 
-          alt={title} 
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+        <img
+          src={image}
+          alt={title}
+          loading="lazy"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end">
-          <h3 className="text-xl font-bold p-4">{title}</h3>
+        <div className="absolute inset-0 bg-gradient-to-t from-card via-card/40 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 p-5">
+          <h3 className="text-xl font-bold leading-tight">{title}</h3>
         </div>
       </div>
 
-      <motion.div 
-        className="p-4"
+      {/* Always-visible tech preview */}
+      <div className="px-5 pt-4 pb-4 flex flex-wrap gap-2">
+        {technologies.slice(0, 4).map((tech, index) => (
+          <span key={index} className="chip">
+            {tech}
+          </span>
+        ))}
+        {technologies.length > 4 && (
+          <span className="chip border-border bg-muted text-muted-foreground">
+            +{technologies.length - 4}
+          </span>
+        )}
+      </div>
+
+      <motion.div
+        className="px-5 overflow-hidden"
         initial={{ height: 0, opacity: 0 }}
-        animate={{ 
+        animate={{
           height: isExpanded ? 'auto' : 0,
-          opacity: isExpanded ? 1 : 0
+          opacity: isExpanded ? 1 : 0,
         }}
         transition={{ duration: 0.3 }}
       >
         {isExpanded && (
-          <>
-            <p className="text-foreground/80 mb-4">{description}</p>
-            
+          <div className="pt-4 pb-1">
+            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+              {description}
+            </p>
+
             <div className="mb-4">
-              <h4 className="text-sm font-medium text-foreground/60 mb-2">Technologies</h4>
+              <h4 className="text-xs font-semibold uppercase tracking-widest text-foreground/60 mb-2">
+                All Technologies
+              </h4>
               <div className="flex flex-wrap gap-2">
                 {technologies.map((tech, index) => (
-                  <span 
-                    key={index} 
-                    className="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary"
-                  >
+                  <span key={index} className="chip">
                     {tech}
                   </span>
                 ))}
               </div>
             </div>
-            
-            <div className="flex space-x-3">
+
+            <div className="flex flex-wrap gap-3">
               {/* OLD PROJECT (string link) */}
-              {typeof githubLink === "string" && (
-                <a 
-                  href={githubLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="btn btn-outline flex items-center gap-2"
+              {typeof githubLink === 'string' && (
+                <a
+                  href={githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-outline !px-4 !py-2 text-sm"
                 >
                   <Github size={16} />
                   <span>Code</span>
@@ -80,14 +98,14 @@ const ProjectCard = ({
               )}
 
               {/* NEW PROJECT (frontend + backend) */}
-              {typeof githubLink === "object" && (
+              {typeof githubLink === 'object' && (
                 <>
                   {githubLink.frontend && (
-                    <a 
-                      href={githubLink.frontend} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="btn btn-outline flex items-center gap-2"
+                    <a
+                      href={githubLink.frontend}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-outline !px-4 !py-2 text-sm"
                     >
                       <Github size={16} />
                       <span>Frontend</span>
@@ -95,11 +113,11 @@ const ProjectCard = ({
                   )}
 
                   {githubLink.backend && (
-                    <a 
-                      href={githubLink.backend} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="btn btn-outline flex items-center gap-2"
+                    <a
+                      href={githubLink.backend}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-outline !px-4 !py-2 text-sm"
                     >
                       <Github size={16} />
                       <span>Backend</span>
@@ -108,29 +126,30 @@ const ProjectCard = ({
                 </>
               )}
               {demoLink && (
-                <a 
-                  href={demoLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="btn btn-primary flex items-center gap-2"
+                <a
+                  href={demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary !px-4 !py-2 text-sm"
                 >
                   <Globe size={16} />
                   <span>Demo</span>
                 </a>
               )}
             </div>
-          </>
+          </div>
         )}
       </motion.div>
 
       <button
         onClick={toggleExpand}
-        className="w-full px-4 py-2 flex items-center justify-center text-foreground/70 hover:text-foreground transition-colors border-t border-border"
+        aria-expanded={isExpanded}
+        className="mt-auto w-full px-5 py-3 flex items-center justify-between text-sm text-foreground/70 hover:text-primary transition-colors border-t border-border"
       >
-        {isExpanded ? 'See Less' : 'See More'}
-        <ArrowRight 
-          size={16} 
-          className={`ml-1 transition-transform duration-300 ${isExpanded ? 'rotate-90' : ''}`} 
+        <span>{isExpanded ? 'See Less' : 'See More'}</span>
+        <ArrowRight
+          size={16}
+          className={`transition-transform duration-300 ${isExpanded ? 'rotate-90' : ''}`}
         />
       </button>
     </motion.div>

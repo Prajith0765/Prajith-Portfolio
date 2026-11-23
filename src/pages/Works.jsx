@@ -17,11 +17,12 @@ const Works = () => {
     : projects;
 
   return (
-    <div className="pt-16">
+    <div className="pt-20">
       <section className="section-padding">
         <div className="container">
-          <SectionHeading 
-            title="My Projects" 
+          <SectionHeading
+            eyebrow="Portfolio"
+            title="My Projects"
             subtitle="A collection of projects I've worked on. Click on each project to see details, code, and live demos where available."
           />
           
@@ -31,12 +32,12 @@ const Works = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <button 
-              className={`px-3 py-1 rounded-full text-sm border ${
-                filter === null 
-                  ? 'bg-primary text-primary-foreground border-primary' 
-                  : 'bg-transparent border-border text-foreground/70 hover:border-primary/50'
-              } transition-colors`}
+            <button
+              className={`px-4 py-1.5 rounded-full text-sm border ${
+                filter === null
+                  ? 'bg-primary text-primary-foreground border-transparent'
+                  : 'bg-card/40 border-border text-foreground/70 hover:border-primary/50'
+              } transition-all`}
               onClick={() => setFilter(null)}
             >
               All
@@ -45,11 +46,11 @@ const Works = () => {
             {allTechnologies.map(tech => (
               <button 
                 key={tech} 
-                className={`px-3 py-1 rounded-full text-sm border ${
-                  filter === tech 
-                    ? 'bg-primary text-primary-foreground border-primary' 
-                    : 'bg-transparent border-border text-foreground/70 hover:border-primary/50'
-                } transition-colors`}
+                className={`px-4 py-1.5 rounded-full text-sm border ${
+                  filter === tech
+                    ? 'bg-primary text-primary-foreground border-transparent'
+                    : 'bg-card/40 border-border text-foreground/70 hover:border-primary/50'
+                } transition-all`}
                 onClick={() => setFilter(tech)}
               >
                 {tech}

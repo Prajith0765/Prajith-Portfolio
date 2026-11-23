@@ -24,6 +24,7 @@ export interface Certificate {
 
 export interface Technology {
   name: string;
+  category?: string;
   icon: string;
 }
 

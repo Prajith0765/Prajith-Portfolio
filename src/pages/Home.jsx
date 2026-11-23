@@ -6,7 +6,7 @@ import ProjectCard from '../components/ProjectCard';
 import { projects } from '../data/projects';
 import { technologies } from '../data/technologies';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -16,30 +16,32 @@ const Home = () => {
   return (
     <div>
       <HeroSection />
-      
+
       <Element name="tech-stack">
-        <section className="section-padding bg-card/30">
+        <section className="section-padding bg-card/30 border-y border-border/50">
           <div className="container">
-            <SectionHeading 
-              title="My Tech Stack" 
-              subtitle="These are the technologies I work with to bring ideas to life."
+            <SectionHeading
+              eyebrow="Skills"
+              title="My Tech Stack"
+              subtitle="The languages, frameworks and tools I use to bring ideas to life."
               centered
             />
-            
+
             <TechStack technologies={technologies} />
           </div>
         </section>
       </Element>
-      
+
       <section className="section-padding">
         <div className="container">
-          <SectionHeading 
-            title="Featured Projects" 
-            subtitle="Here are some of my recent projects. Click on each project to learn more."
+          <SectionHeading
+            eyebrow="Portfolio"
+            title="Featured Projects"
+            subtitle="A selection of things I've built. Open a project to see details, tech used and source code."
           />
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredProjects.map(project => (
+            {featuredProjects.map((project) => (
               <ProjectCard
                 key={project.id}
                 title={project.title}
@@ -51,46 +53,48 @@ const Home = () => {
               />
             ))}
           </div>
-          
-          <motion.div 
-            className="mt-10 text-center"
+
+          <motion.div
+            className="mt-12 text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <Link 
-              to="/works" 
-              className="inline-flex items-center text-primary hover:text-primary/80 font-medium"
-            >
+            <Link to="/works" className="btn btn-outline group">
               View All Projects
-              <ArrowRight size={16} className="ml-1" />
+              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
             </Link>
           </motion.div>
         </div>
       </section>
-      
-      <section className="section-padding bg-card/30">
+
+      <section className="section-padding">
         <div className="container">
-          <SectionHeading 
-            title="Get In Touch"
-            subtitle="Interested in working together? Feel free to reach out to me through any of these platforms."
-            centered
-          />
-          
-          <motion.div 
-            className="flex flex-col items-center"
-            initial={{ opacity: 0, y: 20 }}
+          <motion.div
+            className="relative overflow-hidden rounded-2xl border border-border bg-card/60 px-6 py-14 md:py-20 text-center"
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6 }}
           >
-            <Link 
-              to="/contact" 
-              className="btn btn-primary"
-            >
-              Contact Me
-            </Link>
+
+            <div className="relative">
+              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-secondary">
+                Let's work together
+              </span>
+              <h2 className="heading-2 mt-3 mb-4">
+                Have a project or opportunity in mind?
+              </h2>
+              <p className="text-muted-foreground max-w-xl mx-auto mb-8">
+                I'm open to new roles and freelance work. Drop me a message and
+                I'll get back to you as soon as possible.
+              </p>
+              <Link to="/contact" className="btn btn-primary">
+                <Mail size={18} />
+                Contact Me
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
